@@ -48,12 +48,12 @@ const ContactForm = ({ onAdd }) => {
     >
       <Form className={s.formStyle}>
         <label className={s.labelStyle} htmlFor="name">
-          Name
+          NAME
         </label>
         <Field name="name" placeholder="Enter name" />
         <ErrorMessage className={s.errorMessage} name="name" component="p" />
         <label className={s.labelStyle} htmlFor="number">
-          Phone number
+          PHONE NUMBER
         </label>
         <Field name="number" placeholder="Enter number" />
         <ErrorMessage className={s.errorMessage} name="number" component="p" />
