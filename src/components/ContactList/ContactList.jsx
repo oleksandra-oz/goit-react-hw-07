@@ -1,19 +1,25 @@
 import { useDispatch, useSelector } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
+import { deleteContact } from "../../redux/contactsOps";
+import { useEffect } from "react";
+import { fetchData } from "../../redux/contactsOps";
+import {
+  selectContacts,
+  selectFilteredContacts,
+} from "../../redux/contactsSlice";
+import { selectNameFilter } from "../../redux/filtersSlice";
 
 const ContactList = () => {
-  const contactsData = useSelector((state) => state.contacts.items);
-  const state = useSelector((state) => state);
-  console.log("FULL STATE:", state);
-  const filteredContacts = useSelector((state) => state.filter.search);
-  const filtered = contactsData?.filter((contact) =>
-    contact.name.toLowerCase().includes(filteredContacts.toLowerCase())
-  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+  const contactsData = useSelector(selectContacts);
+  const filteredContacts = useSelector(selectNameFilter);
+  const filtered = useSelector(selectFilteredContacts);
 
   if (!contactsData || contactsData.length === 0) {
     return <p>No contacts found.</p>; // Заглушка, якщо масив порожній
   }
-  const dispatch = useDispatch();
   const handleDelete = (id) => {
     dispatch(deleteContact(id));
   };

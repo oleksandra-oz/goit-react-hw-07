@@ -4,20 +4,20 @@ import * as Yup from "yup";
 import s from "./ContactForm.module.css";
 import { nanoid } from "nanoid";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contactsOps";
 
 const ContactForm = ({ onAdd }) => {
   const dispatch = useDispatch();
 
-  const nameId = useId();
-  const numId = useId();
+  // const nameId = useId();
+  // const numId = useId();
 
   const initialValues = {
     id: "",
     name: "",
     number: "",
   };
-  const onlyLetters = /^[a-zA-Z]*$/;
+  const onlyLetters = /^[a-zA-ZÀ-ÿ\s\-]{2,50}$/;
   const phoneNumberRegex =
     /^(\+?\d{1,3}[-.\s]?)?(\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
 
