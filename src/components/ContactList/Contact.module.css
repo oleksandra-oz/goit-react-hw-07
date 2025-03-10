@@ -1,5 +1,8 @@
 .contactCard {
-  background-color: #aef4cc; /* Колір морської хвилі */
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background-color: #a4f7c8; /* Колір морської хвилі */
   color: #060606; /* Білий текст */
   border-radius: 12px;
   padding: 16px;
