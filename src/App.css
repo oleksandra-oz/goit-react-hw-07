@@ -4,18 +4,24 @@
   padding: 2rem;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+body {
+  background: linear-gradient(135deg, #05301f, #1b3e2d);
+  color: white; /* Білий текст для контрасту */
+  font-family: "Arial", sans-serif;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e4c34, #4c7b68);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  width: fit-content;
+  margin: 20px auto;
 }
 
 @keyframes logo-spin {

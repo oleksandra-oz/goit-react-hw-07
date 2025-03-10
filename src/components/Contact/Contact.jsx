@@ -9,8 +9,12 @@ const Contact = ({ name, number, id }) => {
   return (
     <div>
       <ul>
-        <li>Name: {name}</li>
-        <li>Number: {number}</li>
+        <li>
+          <strong>Name:</strong> {name}
+        </li>
+        <li>
+          <strong>Number:</strong> {number}
+        </li>
       </ul>
     </div>
   );

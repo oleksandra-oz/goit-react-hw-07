@@ -10,10 +10,10 @@ const SearchBox = () => {
   };
 
   return (
-    <div>
+    <div className={s.searchForm}>
       <p>Find contacts by name</p>
       <input
-        className={s.SBinput}
+        className={s.searchInput}
         type="text"
         name="name"
         value={filter}
